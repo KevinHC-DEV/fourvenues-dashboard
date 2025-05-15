@@ -5,11 +5,13 @@ import { HttpClient } from '@angular/common/http';
 import { Subscription, interval } from 'rxjs';
 import { SidebarComponent } from "./layout/sidebar/sidebar.component";
 import { TopbarComponent } from "./layout/topbar/topbar.component";
+import { DashboardMenuComponent } from "./layout/dashboard-menu/dashboard-menu.component";
+import { ContactSidebarComponent } from "./layout/contact-sidebar/contact-sidebar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgIf, NgFor, SidebarComponent, TopbarComponent],
+  imports: [RouterOutlet, NgIf, NgFor, SidebarComponent, TopbarComponent, DashboardMenuComponent, ContactSidebarComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })

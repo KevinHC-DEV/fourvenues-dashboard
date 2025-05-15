@@ -4,12 +4,20 @@
 
   <!-- Main container -->
   <div class="flex-1 flex flex-col">
-    <!-- Topbar -->
     <app-topbar></app-topbar>
 
     <!-- Main content -->
-    <main class="flex-1 p-6 overflow-auto">
-      <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+    <main class="flex p-6 flex-1 overflow-hidden">
+      <!-- Contenedor con borde derecho para separar visualmente -->
+      <div class="flex flex-col w-64 h-full border-r border-gray-700 pr-4">
+        <app-dashboard-menu class="flex-grow overflow-auto"></app-dashboard-menu>
+        <app-contact-sidebar class="flex-shrink-0"></app-contact-sidebar>
+      </div>
+
+      <!-- Aquí irá el contenido principal -->
+      <div class="flex-1 overflow-auto px-6">
+        <!-- Tu contenido aquí -->
+      </div>
     </main>
   </div>
 </div>
