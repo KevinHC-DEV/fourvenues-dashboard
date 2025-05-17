@@ -1,23 +1,46 @@
 <div class="flex h-screen bg-gray-900 text-white">
-  <!-- Sidebar -->
-  <app-sidebar></app-sidebar>
+  <!-- Sidebar component -->
+  <app-sidebar class="hidden md:flex"></app-sidebar>
 
-  <!-- Main container -->
   <div class="flex-1 flex flex-col">
+    <!-- Topbar component -->
     <app-topbar></app-topbar>
 
-    <!-- Main content -->
-    <main class="flex p-6 flex-1 overflow-hidden">
-      <!-- Contenedor con borde derecho para separar visualmente -->
+    <main class="flex flex-col md:flex-row flex-1 overflow-hidden p-4 md:p-6 gap-6">
+
+      <!-- Dashboard menu and contacts sidebar -->
       <div class="flex flex-col w-64 h-full border-r border-gray-700 pr-4">
+        <!-- Dashboard menu component -->
         <app-dashboard-menu class="flex-grow overflow-auto"></app-dashboard-menu>
+
+        <!-- Contact sidebar component -->
         <app-contact-sidebar class="flex-shrink-0"></app-contact-sidebar>
       </div>
 
-      <!-- Aquí irá el contenido principal -->
-      <div class="flex-1 overflow-auto px-6">
-        <!-- Tu contenido aquí -->
+
+      <!-- Main dashboard content -->
+      <div class="flex-1 overflow-auto space-y-6">
+        <!-- Dashboard content component -->
+        <section>
+          <app-dashboard-content></app-dashboard-content>
+        </section>
+
+        <!-- Dashboard metrics component -->
+        <section>
+          <app-dashboard-metrics></app-dashboard-metrics>
+        </section>
+
+        <!-- Dashboard graph component -->
+        <section>
+          <app-dashboard-graph></app-dashboard-graph>
+        </section>
+
+        <!-- Dashboard tables component -->
+        <section>
+          <app-dashboard-tables></app-dashboard-tables>
+        </section>
       </div>
+
     </main>
   </div>
 </div>

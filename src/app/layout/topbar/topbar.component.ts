@@ -1,11 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { interval, Subscription } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-topbar',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './topbar.component.html',
-  styleUrl: './topbar.component.css'
 })
-export class TopbarComponent {
+export class TopbarComponent implements OnDestroy {
+  user: any = null;
+  private timerSub: Subscription | null = null;
 
+  constructor(private http: HttpClient) {
+    this.fetchUser();
+    this.startTimer();
+  }
+
+  fetchUser(): void {
+    this.http.get('https://randomuser.me/api/').subscribe((res: any) => {
+      this.user = res.results[0];
+    });
+  }
+
+  startTimer(): void {
+    this.stopTimer();
+    this.timerSub = interval(10000).subscribe(() => this.fetchUser());
+  }
+
+  stopTimer(): void {
+    this.timerSub?.unsubscribe();
+  }
+
+  onPhotoClick(): void {
+    this.fetchUser();
+    this.startTimer();
+  }
+
+  ngOnDestroy(): void {
+    this.stopTimer();
+  }
 }

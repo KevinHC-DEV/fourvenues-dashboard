@@ -1,17 +1,19 @@
 import { Component, OnDestroy } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NgIf, NgFor } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Subscription, interval } from 'rxjs';
 import { SidebarComponent } from "./layout/sidebar/sidebar.component";
 import { TopbarComponent } from "./layout/topbar/topbar.component";
 import { DashboardMenuComponent } from "./layout/dashboard-menu/dashboard-menu.component";
 import { ContactSidebarComponent } from "./layout/contact-sidebar/contact-sidebar.component";
+import { DashboardContentComponent } from "./pages/dashboard-content/dashboard-content.component";
+import { DashboardMetricsComponent } from "./pages/dashboard-metrics/dashboard-metrics.component";
+import { DashboardGraphComponent } from './pages/dashboard-graph/dashboard-graph.component';
+import { DashboardTablesComponent } from "./pages/dashboard-tables/dashboard-tables.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgIf, NgFor, SidebarComponent, TopbarComponent, DashboardMenuComponent, ContactSidebarComponent],
+  imports: [SidebarComponent, TopbarComponent, DashboardMenuComponent, ContactSidebarComponent, DashboardContentComponent, DashboardMetricsComponent, DashboardGraphComponent, DashboardTablesComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })

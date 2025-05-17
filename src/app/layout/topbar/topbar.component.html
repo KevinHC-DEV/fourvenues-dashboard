@@ -36,7 +36,11 @@
 
 
         <!-- User -->
-        <span class="text-white text-base">Micheal Hogan</span>
-        <img src="https://i.pravatar.cc/40" alt="avatar" class="w-10 h-10 rounded-full" />
+        <span class="text-white text-base">
+            {{ user?.name.first }} {{ user?.name.last }}
+        </span>
+        <img *ngIf="user" [src]="user.picture.thumbnail" (click)="onPhotoClick()"
+            class="w-10 h-10 rounded-full cursor-pointer" alt="avatar" />
+
     </div>
 </header>
