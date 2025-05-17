@@ -1,4 +1,4 @@
-<div class="relative flex items-center justify-between mb-6">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
     <!-- Dashboard title -->
     <div class="flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-300" fill="none" viewBox="0 0 24 24"
@@ -10,14 +10,14 @@
     </div>
 
     <!-- Filters and date range -->
-    <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-4">
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
         <!-- Filter buttons -->
-        <div class="inline-flex items-center border border-gray-600 rounded-full overflow-hidden">
-            <button class="px-4 py-1 text-sm text-white hover:bg-gray-700 border-r border-gray-600">Today</button>
-            <button class="px-4 py-1 text-sm text-white hover:bg-gray-700 border-r border-gray-600">Week</button>
-            <button class="px-4 py-1 text-sm text-white hover:bg-gray-700 border-r border-gray-600">Month</button>
-            <button class="px-4 py-1 text-sm text-white hover:bg-gray-700 border-r border-gray-600">Quarter</button>
-            <button class="px-4 py-1 text-sm text-white hover:bg-gray-700">Year</button>
+        <div class="flex flex-wrap justify-center border border-gray-600 rounded-full overflow-hidden">
+            <button class="px-3 py-1 text-sm text-white hover:bg-gray-700 border-r border-gray-600">Today</button>
+            <button class="px-3 py-1 text-sm text-white hover:bg-gray-700 border-r border-gray-600">Week</button>
+            <button class="px-3 py-1 text-sm text-white hover:bg-gray-700 border-r border-gray-600">Month</button>
+            <button class="px-3 py-1 text-sm text-white hover:bg-gray-700 border-r border-gray-600">Quarter</button>
+            <button class="px-3 py-1 text-sm text-white hover:bg-gray-700">Year</button>
         </div>
 
         <!-- Date range -->
@@ -32,7 +32,7 @@
     </div>
 
     <!-- Add widget button -->
-    <div>
+    <div class="flex justify-end">
         <button class="flex items-center gap-2 px-4 py-1 text-sm border border-gray-600 rounded-full hover:bg-gray-700">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">

@@ -11,7 +11,7 @@
     </div>
 
     <!-- Legend -->
-    <div class="flex items-center justify-center gap-4 mb-4 text-sm text-gray-300">
+    <div class="flex flex-wrap items-center justify-center gap-4 mb-4 text-sm text-gray-300">
         <div class="flex items-center gap-2">
             <span class="w-3 h-3 rounded-full bg-purple-400"></span> Click Rate
         </div>
@@ -21,9 +21,8 @@
     </div>
 
     <!-- Chart -->
-    <div class="relative h-64 bg-gray-700 rounded-md px-4 pt-4 pb-4 overflow-hidden">
-        <div class="flex h-full w-full">
-
+    <div class="relative bg-gray-700 rounded-md px-4 pt-4 pb-4 overflow-x-auto">
+        <div class="flex h-64 sm:h-64 w-[560px] sm:w-full">
             <!-- Y Axis -->
             <div class="flex flex-col justify-between items-end pr-2 text-xs text-gray-500">
                 <span>750%</span>
@@ -34,7 +33,6 @@
 
             <!-- Bars and Grid -->
             <div class="relative flex-1">
-
                 <!-- Grid Lines -->
                 <div class="absolute inset-0 flex flex-col justify-between pointer-events-none">
                     <div class="border-t border-gray-600 w-full"></div>
@@ -44,7 +42,7 @@
                 </div>
 
                 <!-- Bars -->
-                <div class="relative z-10 flex items-end justify-between h-full px-2">
+                <div class="relative z-10 flex items-end justify-between h-full px-2 min-w-[480px] sm:min-w-0">
                     <ng-container *ngFor="let item of data">
                         <div class="flex flex-col items-center w-8">
                             <div class="flex items-end gap-1 h-48">

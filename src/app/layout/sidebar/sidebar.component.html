@@ -1,6 +1,7 @@
-<aside class="w-16 h-screen bg-gray-800 flex flex-col items-center py-6">
+<aside
+    class="w-full max-w-[80px] md:w-16 md:max-w-none min-h-screen bg-gray-800 flex flex-col items-center py-4 md:py-6 overflow-hidden">
     <!-- Sidebar toggle button -->
-    <div>
+    <div class="mb-4 md:mb-6">
         <button class="text-gray-400 hover:text-white">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
@@ -10,7 +11,7 @@
     </div>
 
     <!-- Navigation icons -->
-    <div class="flex flex-col items-center space-y-14 flex-grow justify-center">
+    <div class="flex flex-col items-center justify-center space-y-8 flex-1 overflow-y-auto">
         <!-- Home icon -->
         <button class="text-gray-400 hover:text-white">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"

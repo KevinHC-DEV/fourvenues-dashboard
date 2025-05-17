@@ -13,6 +13,9 @@ export class TopbarComponent implements OnDestroy {
   user: any = null;
   private timerSub: Subscription | null = null;
 
+
+  isSearchOpen = false;
+
   constructor(private http: HttpClient) {
     this.fetchUser();
     this.startTimer();
@@ -36,6 +39,10 @@ export class TopbarComponent implements OnDestroy {
   onPhotoClick(): void {
     this.fetchUser();
     this.startTimer();
+  }
+
+  toggleSearch(): void {
+    this.isSearchOpen = !this.isSearchOpen;
   }
 
   ngOnDestroy(): void {

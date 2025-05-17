@@ -1,7 +1,9 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <!-- Channel Section -->
-    <div class="bg-gray-800 rounded-lg shadow-md p-4 md:col-span-2">
-        <div class="grid grid-cols-6 items-center text-sm text-gray-400 border-b border-gray-700 pb-2 mb-4 font-medium">
+    <div class="bg-gray-800 rounded-lg shadow-md p-4 md:col-span-2 overflow-x-auto">
+        <!-- Header -->
+        <div
+            class="min-w-[600px] grid grid-cols-6 items-center text-sm text-gray-400 border-b border-gray-700 pb-2 mb-4 font-medium">
             <span class="text-white">Channel</span>
             <span>Sessions</span>
             <span>% of Traffic</span>
@@ -15,53 +17,34 @@
             </button>
         </div>
 
-        <div class="text-sm divide-y divide-gray-700">
+        <!-- Rows -->
+        <div class="min-w-[600px] text-sm divide-y divide-gray-700">
             <div class="grid grid-cols-6 items-center text-white py-3">
-                <span>Direct</span>
-                <span>3,397</span>
-                <span>65.9%</span>
-                <span>3.5%</span>
-                <span>118</span>
+                <span>Direct</span><span>3,397</span><span>65.9%</span><span>3.5%</span><span>118</span>
                 <div class="h-1 w-full bg-gray-600 rounded">
                     <div class="h-1 bg-purple-500 rounded" style="width: 90%"></div>
                 </div>
             </div>
             <div class="grid grid-cols-6 items-center text-white py-3">
-                <span>Email</span>
-                <span>808</span>
-                <span>15.7%</span>
-                <span>1.9%</span>
-                <span>15</span>
+                <span>Email</span><span>808</span><span>15.7%</span><span>1.9%</span><span>15</span>
                 <div class="h-1 w-full bg-gray-600 rounded">
                     <div class="h-1 bg-purple-500 rounded" style="width: 40%"></div>
                 </div>
             </div>
             <div class="grid grid-cols-6 items-center text-white py-3">
-                <span>Organic Search</span>
-                <span>430</span>
-                <span>8.3%</span>
-                <span>0.2%</span>
-                <span>1</span>
+                <span>Organic Search</span><span>430</span><span>8.3%</span><span>0.2%</span><span>1</span>
                 <div class="h-1 w-full bg-gray-600 rounded">
                     <div class="h-1 bg-purple-500 rounded" style="width: 10%"></div>
                 </div>
             </div>
             <div class="grid grid-cols-6 items-center text-white py-3">
-                <span>Paid Search</span>
-                <span>194</span>
-                <span>2.1%</span>
-                <span>0.2%</span>
-                <span>5</span>
+                <span>Paid Search</span><span>194</span><span>2.1%</span><span>0.2%</span><span>5</span>
                 <div class="h-1 w-full bg-gray-600 rounded">
                     <div class="h-1 bg-purple-500 rounded" style="width: 20%"></div>
                 </div>
             </div>
             <div class="grid grid-cols-6 items-center text-white py-3">
-                <span>Referral</span>
-                <span>108</span>
-                <span>1.0%</span>
-                <span>2.4%</span>
-                <span>7</span>
+                <span>Referral</span><span>108</span><span>1.0%</span><span>2.4%</span><span>7</span>
                 <div class="h-1 w-full bg-gray-600 rounded">
                     <div class="h-1 bg-purple-500 rounded" style="width: 25%"></div>
                 </div>
@@ -70,8 +53,10 @@
     </div>
 
     <!-- Top Cities Section -->
-    <div class="bg-gray-800 rounded-lg shadow-md p-4">
-        <div class="grid grid-cols-3 items-center text-sm text-gray-400 border-b border-gray-700 pb-2 mb-4 font-medium">
+    <div class="bg-gray-800 rounded-lg shadow-md p-4 overflow-x-auto">
+        <!-- Header -->
+        <div
+            class="min-w-[300px] grid grid-cols-3 items-center text-sm text-gray-400 border-b border-gray-700 pb-2 mb-4 font-medium">
             <span class="text-white col-span-1">Top Cities</span>
             <span class="col-span-1">Customers</span>
             <button class="place-self-end text-gray-400 hover:text-white col-span-1">
@@ -82,7 +67,8 @@
             </button>
         </div>
 
-        <div class="divide-y divide-gray-700 text-sm text-white">
+        <!-- Rows -->
+        <div class="min-w-[300px] divide-y divide-gray-700 text-sm text-white">
             <div class="grid grid-cols-2 items-center py-3">
                 <span>Ottawa</span>
                 <div class="flex items-center gap-2">
