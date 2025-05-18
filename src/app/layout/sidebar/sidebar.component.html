@@ -2,7 +2,7 @@
     class="w-full max-w-[80px] md:w-16 md:max-w-none min-h-screen bg-gray-800 flex flex-col items-center py-4 md:py-6 overflow-hidden">
     <!-- Sidebar toggle button -->
     <div class="mb-4 md:mb-6">
-        <button class="text-gray-400 hover:text-white">
+        <button class="text-gray-400 hover:text-white transition-colors" aria-label="Toggle sidebar">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 6h16.5m-16.5 6h16.5" />
@@ -11,9 +11,9 @@
     </div>
 
     <!-- Navigation icons -->
-    <div class="flex flex-col items-center justify-center space-y-8 flex-1 overflow-y-auto">
-        <!-- Home icon -->
-        <button class="text-gray-400 hover:text-white">
+    <nav class="flex flex-col items-center justify-center space-y-8 flex-1 overflow-y-auto">
+        <button class="text-gray-400 hover:text-white transition-colors" aria-label="Home">
+            <!-- Home icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -21,8 +21,7 @@
             </svg>
         </button>
 
-        <!-- Dashboard icon -->
-        <button class="text-gray-400 hover:text-white">
+        <button class="text-gray-400 hover:text-white transition-colors" aria-label="Dashboard">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -30,8 +29,8 @@
             </svg>
         </button>
 
-        <!-- Chat icon -->
-        <button class="text-gray-400 hover:text-white">
+        <button class="text-gray-400 hover:text-white transition-colors" aria-label="Chat">
+            <!-- Chat icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -39,8 +38,8 @@
             </svg>
         </button>
 
-        <!-- Calendar icon -->
-        <button class="text-gray-400 hover:text-white">
+        <button class="text-gray-400 hover:text-white transition-colors" aria-label="Calendar">
+            <!-- Calendar icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -48,8 +47,8 @@
             </svg>
         </button>
 
-        <!-- User icon -->
-        <button class="text-gray-400 hover:text-white">
+        <button class="text-gray-400 hover:text-white transition-colors" aria-label="User">
+            <!-- User icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -57,8 +56,8 @@
             </svg>
         </button>
 
-        <!-- Users icon -->
-        <button class="text-gray-400 hover:text-white">
+        <button class="text-gray-400 hover:text-white transition-colors" aria-label="Users">
+            <!-- Users icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -66,8 +65,8 @@
             </svg>
         </button>
 
-        <!-- Gallery icon -->
-        <button class="text-gray-400 hover:text-white">
+        <button class="text-gray-400 hover:text-white transition-colors" aria-label="Gallery">
+            <!-- Gallery icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -76,5 +75,5 @@
                     d="M9.75 9.75h.008v.008H9.75V9.75zM5.25 18.75l4.5-6 3.75 4.5 2.25-3 3 4.5" />
             </svg>
         </button>
-    </div>
+    </nav>
 </aside>

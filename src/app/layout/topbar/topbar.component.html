@@ -8,16 +8,13 @@
 
     <!-- Navigation + Search (Desktop) -->
     <div class="hidden md:flex items-center justify-center gap-10">
-
-        <!-- Navigation -->
         <nav class="flex gap-4 text-sm text-gray-400">
             <a href="#" class="text-white font-semibold">Popular</a>
-            <a href="#" class="hover:text-white">For You</a>
-            <a href="#" class="hover:text-white">Messages</a>
+            <a href="#" class="hover:text-white transition-colors">For You</a>
+            <a href="#" class="hover:text-white transition-colors">Messages</a>
         </nav>
 
-        <!-- Search (Desktop) -->
-        <div class="relative hidden md:block">
+        <div class="relative">
             <input type="text" placeholder="Search messages"
                 class="bg-gray-700 pl-10 pr-4 py-2 text-sm text-white placeholder-gray-400 rounded focus:outline-none w-64" />
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -29,11 +26,11 @@
         </div>
     </div>
 
-    <!-- Search (Mobile) + Notifications + User -->
+    <!-- Mobile search + notifications + user -->
     <div class="flex items-center gap-3 ml-auto md:justify-end w-full md:w-auto">
 
-        <!-- Search Icon (Mobile) -->
-        <button (click)="toggleSearch()" class="text-gray-400 hover:text-white md:hidden">
+        <!-- Mobile search icon -->
+        <button (click)="toggleSearch()" class="text-gray-400 hover:text-white md:hidden" aria-label="Open search">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -41,7 +38,7 @@
             </svg>
         </button>
 
-        <!-- Search Input (Mobile) -->
+        <!-- Mobile search input -->
         <div *ngIf="isSearchOpen" class="relative md:hidden">
             <input type="text" placeholder="Search..."
                 class="bg-gray-700 pl-10 pr-4 py-2 text-sm text-white placeholder-gray-400 rounded focus:outline-none w-56" />
@@ -53,8 +50,8 @@
             </svg>
         </div>
 
-        <!-- Notification -->
-        <button class="text-gray-400 hover:text-white">
+        <!-- Notifications -->
+        <button class="text-gray-400 hover:text-white" aria-label="Notifications">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -62,14 +59,13 @@
             </svg>
         </button>
 
-        <!-- User -->
-        <img *ngIf="user" [src]="user.picture.thumbnail" (click)="onPhotoClick()"
-            class="w-8 h-8 rounded-full cursor-pointer" alt="avatar" />
+        <!-- Avatar -->
+        <img *ngIf="user" [src]="user.picture.thumbnail" alt="User avatar" (click)="onPhotoClick()"
+            class="w-8 h-8 rounded-full cursor-pointer" />
 
-        <!-- Username (Desktop only) -->
+        <!-- Username (desktop only) -->
         <span *ngIf="user" class="hidden md:inline text-sm text-white">
             {{ user.name.first }} {{ user.name.last }}
         </span>
-
     </div>
 </header>

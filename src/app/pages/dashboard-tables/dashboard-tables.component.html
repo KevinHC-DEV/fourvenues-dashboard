@@ -9,7 +9,7 @@
             <span>% of Traffic</span>
             <span>Goal Rate</span>
             <span>Goals</span>
-            <button class="place-self-end text-gray-400 hover:text-white">
+            <button class="place-self-end text-gray-400 hover:text-white" aria-label="More options">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
                     <path
                         d="M10 6.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM10 11.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM10 16.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" />
@@ -19,34 +19,14 @@
 
         <!-- Rows -->
         <div class="min-w-[600px] text-sm divide-y divide-gray-700">
-            <div class="grid grid-cols-6 items-center text-white py-3">
-                <span>Direct</span><span>3,397</span><span>65.9%</span><span>3.5%</span><span>118</span>
+            <div *ngFor="let channel of channelStats" class="grid grid-cols-6 items-center text-white py-3">
+                <span>{{ channel.name }}</span>
+                <span>{{ channel.sessions }}</span>
+                <span>{{ channel.traffic }}</span>
+                <span>{{ channel.goalRate }}</span>
+                <span>{{ channel.goals }}</span>
                 <div class="h-1 w-full bg-gray-600 rounded">
-                    <div class="h-1 bg-purple-500 rounded" style="width: 90%"></div>
-                </div>
-            </div>
-            <div class="grid grid-cols-6 items-center text-white py-3">
-                <span>Email</span><span>808</span><span>15.7%</span><span>1.9%</span><span>15</span>
-                <div class="h-1 w-full bg-gray-600 rounded">
-                    <div class="h-1 bg-purple-500 rounded" style="width: 40%"></div>
-                </div>
-            </div>
-            <div class="grid grid-cols-6 items-center text-white py-3">
-                <span>Organic Search</span><span>430</span><span>8.3%</span><span>0.2%</span><span>1</span>
-                <div class="h-1 w-full bg-gray-600 rounded">
-                    <div class="h-1 bg-purple-500 rounded" style="width: 10%"></div>
-                </div>
-            </div>
-            <div class="grid grid-cols-6 items-center text-white py-3">
-                <span>Paid Search</span><span>194</span><span>2.1%</span><span>0.2%</span><span>5</span>
-                <div class="h-1 w-full bg-gray-600 rounded">
-                    <div class="h-1 bg-purple-500 rounded" style="width: 20%"></div>
-                </div>
-            </div>
-            <div class="grid grid-cols-6 items-center text-white py-3">
-                <span>Referral</span><span>108</span><span>1.0%</span><span>2.4%</span><span>7</span>
-                <div class="h-1 w-full bg-gray-600 rounded">
-                    <div class="h-1 bg-purple-500 rounded" style="width: 25%"></div>
+                    <div class="h-1 bg-purple-500 rounded" [style.width]="channel.progress + '%'"></div>
                 </div>
             </div>
         </div>
@@ -59,7 +39,7 @@
             class="min-w-[300px] grid grid-cols-3 items-center text-sm text-gray-400 border-b border-gray-700 pb-2 mb-4 font-medium">
             <span class="text-white col-span-1">Top Cities</span>
             <span class="col-span-1">Customers</span>
-            <button class="place-self-end text-gray-400 hover:text-white col-span-1">
+            <button class="place-self-end text-gray-400 hover:text-white col-span-1" aria-label="More options">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
                     <path
                         d="M10 6.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM10 11.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM10 16.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" />
@@ -69,48 +49,12 @@
 
         <!-- Rows -->
         <div class="min-w-[300px] divide-y divide-gray-700 text-sm text-white">
-            <div class="grid grid-cols-2 items-center py-3">
-                <span>Ottawa</span>
+            <div *ngFor="let city of cityStats" class="grid grid-cols-2 items-center py-3">
+                <span>{{ city.name }}</span>
                 <div class="flex items-center gap-2">
-                    <span>106</span>
+                    <span>{{ city.customers }}</span>
                     <div class="h-1 w-full bg-gray-600 rounded">
-                        <div class="h-1 bg-purple-500 rounded" style="width: 90%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 items-center py-3">
-                <span>Toronto</span>
-                <div class="flex items-center gap-2">
-                    <span>55</span>
-                    <div class="h-1 w-full bg-gray-600 rounded">
-                        <div class="h-1 bg-purple-500 rounded" style="width: 50%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 items-center py-3">
-                <span>New York</span>
-                <div class="flex items-center gap-2">
-                    <span>54</span>
-                    <div class="h-1 w-full bg-gray-600 rounded">
-                        <div class="h-1 bg-purple-500 rounded" style="width: 45%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 items-center py-3">
-                <span>Calgary</span>
-                <div class="flex items-center gap-2">
-                    <span>7</span>
-                    <div class="h-1 w-full bg-gray-600 rounded">
-                        <div class="h-1 bg-purple-500 rounded" style="width: 10%"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 items-center py-3">
-                <span>Berlin</span>
-                <div class="flex items-center gap-2">
-                    <span>32</span>
-                    <div class="h-1 w-full bg-gray-600 rounded">
-                        <div class="h-1 bg-purple-500 rounded" style="width: 28%"></div>
+                        <div class="h-1 bg-purple-500 rounded" [style.width]="city.progress + '%'"></div>
                     </div>
                 </div>
             </div>
